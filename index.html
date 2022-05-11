@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <hgroup>
+                <h1 id="timer1">00:00:00</h1>
+                <h2 id="message">Ready to Start!</h2>
+            </hgroup>
+            
+
+            <form class="lengthAndCycles">
+                <label for="pLength">Pomodoro Length (min): </label>
+                <input type="number" id="pLength" value="25">
+                <label for="bLength">Break Length (min): </label>
+                <input type="number" id="bLength" value="5">
+                <label for="cycles">Number of Pomodoros: </label>
+                <input type="number" id="cycles" value="4">
+            </form>
+            <button id="start_session">Start Pomodoro Session</button>
+            <button id="end_session" class="disabled">End Pomodoro Session</button>
+            <form class="volumeSlider">
+                <label for="volume">Speech Volume</label>
+                <input type="range" onchange="setVolume()" id="volume" min="0" max="1" step = 0.01 value="1">
+            </form>
+            
+        </header>
+        <section>
+            <h2>Instructions:</h2>
+            <p><strong>The Pomodoro method</strong> is a time management method developed by <cite><a href='#ref'>Francesco Cirillo</a></cite>. This method centers around time-boxing, with periods of uninterrupted work separated by small, intentional breaks. The traditional Pomodoro is 30 minutes long: 25 minutes of pure work followed by a 5 minute break. After 4 Pomodoros, take a longer 15-30 minute break.</p>
+
+            <p>To use this timer, choose a Pomodoro length (the default is 25 min), a break length (default: 5 min), and the number of Pomodoros you would like to complete before taking a longer break (default: 4). When you are ready to begin, click the button labeled <em>Start Pomodoro Session</em>. The timer will continue until the number of Pomodoros you chose completes. If you would like to end the timer yourself, you may do so by clicking the <em>End Pomodoro Session</em> button.</p>
+
+            <p>If you would prefer not to limit the number of Pomodoros, remove the default value for <em>Number of Pomodoros</em>. The timer will continue until you click the <em>End Pomodoro Session</em> button.</p>
+        
+        </section>
+        <footer>
+            <cite id="ref">Cirillo, F. (2006). The pomodoro technique (the pomodoro). Agile Processes in Software Engineering and, 54(2), 35.</cite>
+            
+            <p>An exercise to test intervals and timeouts.</p>
+            <p>Site by <a href="https://dbcorridor.com">dbcorridor.com</a></p>
+        </footer>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
